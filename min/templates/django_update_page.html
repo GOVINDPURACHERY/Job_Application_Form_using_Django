@@ -1,0 +1,176 @@
+{% extends "base.html" %}
+
+{% block body %}
+<form method="POST" action="" class="Form" id="Form" novalidate>
+    {% csrf_token %}
+    <div class="formRow">
+        <!-- first_name -->
+        <div class="userInputs">
+            <div class="inputLabel">
+                {{form.first_name.label}}
+                <sup>*</sup>
+            </div>
+            <div class="input-field">
+                {{form.first_name}}
+                <p id="error-tag"><span id="validFirstName"></span><p>
+            </div>    
+        </div>
+        <!-- last_name -->
+        <div class="userInputs">
+            <div class="inputLabel">
+                {{form.last_name.label}}
+            </div>
+            <div class="input-field">
+                {{form.last_name}}
+            </div>   
+        </div>    
+    </div>
+
+    <div class="formRow">
+        <!-- phone -->
+        <div class="userInputs">
+            <div class="inputLabel">
+                {{form.phone.label}}
+                <sup>*</sup>
+            </div>
+            <div class="input-field">
+                {{form.code}}
+                {{form.phone}}
+                <p id="error-tag"><span id="validateNumber"></span></p>
+            </div>    
+        </div>
+        <!-- email -->
+        <div class="userInputs">
+            <div class="inputLabel">
+                {{form.email.label}}
+                <sup>*</sup>
+            </div>
+            <div class="input-field">
+                {{form.email}}
+                <p id="error-tag"><span id="validateEmail"></span></p>
+            </div>    
+        </div>    
+    </div>
+
+    <div class="formRow">
+        <!-- date_of_birth -->
+        <div class="userInputs">
+            <div class="inputLabel">
+                {{form.dob.label}}
+                <sup>*</sup>
+            </div>
+            <div class="input-field">
+                {{form.dob}}
+                <p id="error-tag"><span id="validateDate"></span></p>
+            </div>    
+        </div>
+        <!-- gender -->
+        <div class="userInputs">
+            <div class="inputLabel">
+                {{form.gender.label}}
+                <sup>*</sup>
+            </div>
+            <div class="input-field" id="gender-options">
+                {{form.gender}}
+                <p id="error-tag"><span id="validateGender"></span></p>
+            </div>   
+        </div>
+    </div>
+    
+    <div class="formRow">
+        <!-- job_role -->
+        <div class="userInputs">
+            <div class="inputLabel">
+                {{form.job_role.label}}
+                <sup>*</sup>
+            </div>
+            <div class="input-field">
+                {{form.job_role}}
+                <p id="error-tag"><span id="validateJobRole"></span></p>
+            </div>    
+        </div>
+        <!-- experience -->
+        <div class="userInputs">
+            <div class="inputLabel">
+                {{form.experience.label}}
+                <sup>*</sup>
+            </div>
+            <div class="input-field">
+                {{form.experience}}
+                <p id="error-tag"><span id="validateExperience"></span></p>
+            </div>   
+        </div>
+    </div>
+    
+    <div class="formRow">
+        <!-- address_line_one -->
+        <div class="userInputs">
+            <div class="inputLabel">
+                {{form.address_line_one.label}}
+            </div>
+            <div class="input-field">
+                {{form.address_line_one}}
+            </div>   
+        </div>
+        <!-- address_line_two -->
+        <div class="userInputs">
+            <div class="inputLabel">
+                {{form.address_line_two.label}}
+            </div>
+            <div class="input-field">
+                {{form.address_line_two}}
+            </div>     
+        </div>
+    </div>
+    
+    <div class="formRow">
+        <!-- city -->
+        <div class="userInputs">
+            <div class="inputLabel">
+                {{form.city.label}}
+            </div>
+            <div class="input-field">
+                {{form.city}}
+            </div>   
+        </div>
+        <!-- state -->
+        <div class="userInputs">
+            <div class="inputLabel">
+                {{form.state.label}}
+            </div>
+            <div class="input-field">
+                {{form.state}}
+            </div>    
+        </div>
+    </div>
+    
+    <div class="formRow">
+        <!-- zip_code -->
+        <div class="userInputs">
+            <div class="inputLabel">
+                {{form.zip_code.label}}
+            </div>
+            <div class="input-field">
+                {{form.zip_code}}
+            </div>    
+        </div>
+        <!-- country -->
+        <div class="userInputs">
+            <div class="inputLabel">
+                {{form.country.label}}
+            </div>
+            <div class="input-field">
+                {{form.country}}
+            </div>    
+        </div>
+    </div>
+    <!-- submit button -->
+    <div class="formRow" id="buttonClass">
+        <input type="submit" value="Submit" id="b2"  name="submit">
+    </div> 
+</form>
+
+
+
+
+{% endblock body %}
